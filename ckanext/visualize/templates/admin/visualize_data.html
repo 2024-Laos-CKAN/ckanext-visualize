@@ -24,8 +24,8 @@ https://opensource.org/licenses/MIT.
 {% block primary_content_inner %}
 <form method="post" action="{{ action_url }}" enctype="multipart/form-data" novalidate>
   <h5 for="color-pallete">Chart Colors:</h5>
-  <div class="panel panel-default panel-colors">
-    <div class="panel-body">
+  <div class="card card-default card-colors">
+    <div class="card-body">
       <div id="color-pallete" class="color-pallete" data-module="visualize-colors-settings-remove">
         {% for color in data.visualize_colors %}
         <div class="color-input">
@@ -37,11 +37,11 @@ https://opensource.org/licenses/MIT.
         {% endfor %}
       </div>
     </div>
-    <div class="panel-footer">
+    <div class="card-footer">
       <div class="form-actions form-actions-color">
-        <button type="button" class="btn btn-default pull-left" data-module="visualize-colors-settings-reset"><i
+        <button type="button" class="btn btn-default float-start" data-module="visualize-colors-settings-reset"><i
             class="fa fa-sliders fa-fw" aria-hidden="true"></i>{{ _('Set Default') }}</button>
-        <button type="button" class="btn btn-default pull-right" data-module="visualize-colors-settings-add"><i
+        <button type="button" class="btn btn-default float-end" data-module="visualize-colors-settings-add"><i
             class="fa fa-paint-brush fa-fw" aria-hidden="true"></i>{{ _('Add') }}</button>
       </div>
     </div>
@@ -49,12 +49,12 @@ https://opensource.org/licenses/MIT.
   <div class="row">
     <div class="col-md-4">
       <h5>Bar Chart Icon:</h5>
-      <div class="panel panel-default panel-icon">
-        <div class="panel-heading text-center">
+      <div class="card card-default card-icon">
+        <div class="card-header text-center">
           <button type="button" class="btn btn-default" data-module="visualize-chart-icon-reset"
             data-module-type="bar"><i class="fa fa-sliders fa-fw" aria-hidden="true"></i>{{ _('Set Default') }}</button>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
           <div id="bar-chart-icon">
             <figure>
               {% if data.bar_chart_icon %}
@@ -68,25 +68,25 @@ https://opensource.org/licenses/MIT.
               {% else %}
               {% set bar_chart_icon = '/base/images/Bar-symbol.png' %}
               {% endif %}
-              <img src="{{ bar_chart_icon }}" class="img-responsive center-block img-icon"
+              <img src="{{ bar_chart_icon }}" class="img-fluid mx-auto d-block img-icon"
                 alt="Visualization Type Icon">
             </figure>
           </div>
         </div>
-        <div class="panel-footer" data-module="visualize-chart-type" data-module-type="bar">
+        <div class="card-footer" data-module="visualize-chart-type" data-module-type="bar">
           {{ form.image_upload(data, {}, is_upload_enabled=true, field_url='bar_chart', field_upload='bar_chart_upload', field_clear='bar_chart_clear_upload') }}
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <h5>Line Chart Icon:</h5>
-      <div class="panel panel-default panel-icon">
-        <div class="panel-heading text-center">
+      <div class="card card-default card-icon">
+        <div class="card-header text-center">
           <button type="button" class="btn btn-default" data-module="visualize-chart-icon-reset"
             data-module-type="line"><i class="fa fa-sliders fa-fw"
               aria-hidden="true"></i>{{ _('Set Default') }}</button>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
           <div id="line-chart-icon">
             <figure>
               {% if data.line_chart_icon %}
@@ -100,25 +100,25 @@ https://opensource.org/licenses/MIT.
               {% else %}
               {% set line_chart_icon = '/base/images/Line-symbol.png' %}
               {% endif %}
-              <img src="{{ line_chart_icon }}" class="img-responsive center-block img-icon"
+              <img src="{{ line_chart_icon }}" class="img-fluid mx-auto d-block img-icon"
                 alt="Visualization Type Icon">
             </figure>
           </div>
         </div>
-        <div class="panel-footer" data-module="visualize-chart-type" data-module-type="line">
+        <div class="card-footer" data-module="visualize-chart-type" data-module-type="line">
           {{ form.image_upload(data, {}, is_upload_enabled=true, field_url='line_chart', field_upload='line_chart_upload', field_clear='line_chart_clear_upload') }}
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <h5>Point Chart Icon:</h5>
-      <div class="panel panel-default panel-icon">
-        <div class="panel-heading text-center">
+      <div class="card card-default card-icon">
+        <div class="card-header text-center">
           <button type="button" class="btn btn-default" data-module="visualize-chart-icon-reset"
             data-module-type="point"><i class="fa fa-sliders fa-fw"
               aria-hidden="true"></i>{{ _('Set Default') }}</button>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
           <div id="point-chart-icon">
             <figure>
               {% if data.point_chart_icon %}
@@ -132,12 +132,12 @@ https://opensource.org/licenses/MIT.
               {% else %}
               {% set point_chart_icon = '/base/images/Point-symbol.png' %}
               {% endif %}
-              <img src="{{ point_chart_icon }}" class="img-responsive center-block img-icon"
+              <img src="{{ point_chart_icon }}" class="img-fluid mx-auto d-block img-icon"
                 alt="Visualization Type Icon">
             </figure>
           </div>
         </div>
-        <div class="panel-footer" data-module="visualize-chart-type" data-module-type="point">
+        <div class="card-footer" data-module="visualize-chart-type" data-module-type="point">
           {{ form.image_upload(data, {}, is_upload_enabled=true, field_url='point_chart', field_upload='point_chart_upload', field_clear='point_chart_clear_upload') }}
         </div>
       </div>
@@ -145,7 +145,7 @@ https://opensource.org/licenses/MIT.
   </div>
   <div class="form-actions global-btn-group">
     <hr>
-    <a href="{{ action_url + '?reset=true' }}" class="btn btn-danger pull-left" data-module="confirm-action"
+    <a href="{{ action_url + '?reset=true' }}" class="btn btn-danger float-start" data-module="confirm-action"
       data-module-content="{{ _('Are you sure you want to reset the config?') }}">{{ _('Reset') }}</a>
     <button type="submit" class="btn btn-primary" name="save">{{ _('Save') }}</button>
   </div>
