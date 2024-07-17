@@ -342,7 +342,7 @@ ckan.module('visualize-data', function($) {
         var column = item.attr('data-column');
         var columnType = item.attr('data-column-type');
         var to = $(evt.to).attr('id');
-        unsupportedContainer.addClass('hidden');
+        unsupportedContainer.addClass('d-none');
         isSupported = true;
         if(to === 'y-axis') {
           lastyAxisEvent = { item: evt.item, to: evt.to };
@@ -356,9 +356,9 @@ ckan.module('visualize-data', function($) {
         }
         isSupported = isSupportedGraphType(currentxAxisType, currentyAxisType);
         if(!isSupported) {
-          chartContainer.addClass('hidden');
-          noChartContainer.removeClass('hidden');
-          unsupportedContainer.removeClass('hidden');
+          chartContainer.addClass('d-none');
+          noChartContainer.removeClass('d-none');
+          unsupportedContainer.removeClass('d-none');
         }
         if (columns[column] && isSupported) {
           if (to === 'x-axis') {
@@ -438,8 +438,8 @@ ckan.module('visualize-data', function($) {
             chart.destroy();
             initChart(currentxAxisType);
 
-            chartContainer.removeClass('hidden');
-            noChartContainer.addClass('hidden');
+            chartContainer.removeClass('d-none');
+            noChartContainer.addClass('d-none');
 
             xAxisHiddenInput.val(currentxAxis);
           } else if (to === 'y-axis') {
@@ -512,8 +512,8 @@ ckan.module('visualize-data', function($) {
             chart.destroy();
             initChart(currentxAxisType);
 
-            chartContainer.removeClass('hidden');
-            noChartContainer.addClass('hidden');
+            chartContainer.removeClass('d-none');
+            noChartContainer.addClass('d-none');
 
             yAxisHiddenInput.val(currentyAxis);
           } else if (to === 'color-attr') {
@@ -649,7 +649,7 @@ ckan.module('visualize-data', function($) {
         var item = $(evt.item);
         var column = item.attr('data-column');
         var from = $(evt.from).attr('id');
-        unsupportedContainer.addClass('hidden');
+        unsupportedContainer.addClass('d-none');
         if (columns[column]) {
           if (from === 'x-axis') {
             chartData.labels = [];
@@ -657,8 +657,8 @@ ckan.module('visualize-data', function($) {
             currentxAxisType = null;
             currentxAxis = null;
             if (yAxisList.find('li').length === 0) {
-              chartContainer.addClass('hidden');
-              noChartContainer.removeClass('hidden');
+              chartContainer.addClass('d-none');
+              noChartContainer.removeClass('d-none');
             }
             xAxisHiddenInput.val('');
           } else if (from === 'y-axis') {
@@ -666,8 +666,8 @@ ckan.module('visualize-data', function($) {
             currentyAxisType = null;
             currentyAxis = null;
             if (xAxisList.find('li').length === 0) {
-              chartContainer.addClass('hidden');
-              noChartContainer.removeClass('hidden');
+              chartContainer.addClass('d-none');
+              noChartContainer.removeClass('d-none');
             }
             yAxisHiddenInput.val('');
           } else if (from === 'color-attr') {
