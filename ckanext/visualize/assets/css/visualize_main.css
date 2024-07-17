@@ -8,12 +8,12 @@ https://opensource.org/licenses/MIT.
 
 /* Visualize CSS */
 .visualize-wrapper {
-  margin-top: 1rem;
+  margin-top: 10px;
 }
 
 .card-visualize .card-heading,
 .card-visualize .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .card-visualize .card-footer {
@@ -83,11 +83,11 @@ _:-ms-fullscreen,
 }
 
 .card-body.card-aggregation {
-  padding: 1.35rem;
+  padding: 13.5px;
 }
 
 .chart-container {
-  padding: 1rem;
+  padding: 10px;
 }
 
 .chart-unsupported {
@@ -104,8 +104,8 @@ _:-ms-fullscreen,
 }
 
 .axis-list {
-  padding: 1.5rem 1rem 1rem;
-  min-height: 8.5rem;
+  padding: 15px 10px 10px;
+  min-height: 85px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -115,7 +115,7 @@ _:-ms-fullscreen,
 }
 
 .list-group-item.column {
-  padding: 0.75rem;
+  padding: 7.5px;
   border: none;
   background: none;
   margin: 0;
@@ -128,7 +128,7 @@ _:-ms-fullscreen,
 }
 
 .aggregation-list .badge-pill {
-  margin: 1rem;
+  margin: 10px;
   background-color: #757575;
 }
 
@@ -143,10 +143,12 @@ _:-ms-fullscreen,
 
 .axis-title {
   display: inline-block;
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
+  font-size: 15px;
   position: absolute;
-  top: -1.75rem;
-  padding: 0.5rem 1rem;
+  top: -17.5px;
+  /*padding: 0.5rem 1rem;*/
+  padding: 5px 10px;
   background-color: #f5f5f5;
   border-radius: 4px;
   /* border: 1px dashed #aaa; */
@@ -163,7 +165,7 @@ _:-ms-fullscreen,
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border-radius: 100rem;
+  border-radius: 1000px;
 }
 
 .axis-list .column-pill {
@@ -183,14 +185,14 @@ _:-ms-fullscreen,
 }
 
 .symbol-wrapper {
-  margin: 2rem 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .symbol-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 20px;
   background: #ffffff;
   border-radius: 4px;
   border: 1px solid #757575;
@@ -204,7 +206,7 @@ _:-ms-fullscreen,
 
 .no-chart-illustration {
   width: 600px;
-  margin: 5rem 3rem;
+  margin: 50px 30px;
 }
 
 /* Admin card Visualize */
@@ -215,7 +217,7 @@ _:-ms-fullscreen,
 }
 
 .card-icon .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .card-icon .card-footer {
@@ -232,17 +234,17 @@ _:-ms-fullscreen,
 }
 
 .img-icon {
-  height: 15rem;
+  height: 150px;
   object-fit: contain;
   border-radius: 4px;
 }
 
 .card-colors {
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
 }
 
 .card-colors .card-body {
-  padding: 1rem;
+  padding: 10px;
 }
 
 .color-pallete {
@@ -257,7 +259,7 @@ _:-ms-fullscreen,
 
 .color-pallete .color-input {
   display: flex;
-  margin: 0.5rem;
+  margin: 5px;
 }
 
 .color-pallete .color-input .fa {
@@ -267,7 +269,7 @@ _:-ms-fullscreen,
 .color-pallete .color-input .form-group {
   margin: 0;
   padding: 0;
-  min-width: 11.1rem;
+  min-width: 111px;
 }
 
 .form-horizontal .control-label {
@@ -303,11 +305,11 @@ input[type='color']::-webkit-color-swatch {
 .img-upload-group {
   border: none;
   box-shadow: none;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
 .form-actions-colors {
-  padding: 0.5rem 0;
+  padding: 5px 0;
 }
 
 /* Responsive Design */
@@ -351,13 +353,13 @@ input[type='color']::-webkit-color-swatch {
   }
 
   .figure-wrapper {
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 
   .axis-list {
     flex-basis: 100%;
     max-width: 100%;
-    margin: 1rem auto;
+    margin: 10px auto;
   }
 }
 
@@ -409,4 +411,26 @@ input[type='color']::-webkit-color-swatch {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;
+}
+
+.visualize-wrapper .card {
+  margin-bottom: 20px;
+}
+
+.visualize-wrapper .card-header {
+  padding: 20px;
+}
+
+.visualize-wrapper .card-default .card-header .badge {
+  color: #f5f5f5;
+  background-color: #333333;
+}
+
+.visualize-wrapper .card-footer .list-inline {
+  margin: 0;
+}
+
+.visualize-wrapper .card-footer .list-inline .list-inline-item h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

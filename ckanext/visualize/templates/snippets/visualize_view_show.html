@@ -48,7 +48,7 @@ https://opensource.org/licenses/MIT.
               {% endif %}
 
               <div class="list-group-item column" data-column="{{ field.value }}" data-column-type="{{ field.type }}">
-                <span class="badge rounded-pill column-pill" style="background-color: {{ column_color }};"><i
+                <span class="badge-pill column-pill" style="background-color: {{ column_color }};"><i
                     class="fa {{ h.get_icon_for_data_type(field.type) }} fa-fw" aria-hidden="true"></i><span
                     class="pill-title" title="{{ field.value }}">{{ field.value }}</span></span>
               </div>
@@ -100,7 +100,7 @@ https://opensource.org/licenses/MIT.
         <div class="col-md-3 pe-0">
           <div id="aggregation" class="axis-list aggregation-list">
             <small class="axis-title">{{ _('Aggregation Type') }}</small>
-            <span class="badge rounded-pill">
+            <span class="badge-pill">
               <i class="fa fa-filter fa-fw" aria-hidden="true"></i><span>Count</span>
             </span>
           </div>
