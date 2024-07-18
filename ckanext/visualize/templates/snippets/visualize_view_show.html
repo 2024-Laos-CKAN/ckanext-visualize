@@ -49,7 +49,7 @@ https://opensource.org/licenses/MIT.
 
               <div class="list-group-item column" data-column="{{ field.value }}" data-column-type="{{ field.type }}">
                 <span class="badge-pill column-pill" style="background-color: {{ column_color }};"><i
-                    class="fa {{ h.get_icon_for_data_type(field.type) }} fa-fw" aria-hidden="true"></i><span
+                    class="fa-solid {{ h.get_icon_for_data_type(field.type) }} fa-fw" aria-hidden="true"></i><span
                     class="pill-title" title="{{ field.value }}">{{ field.value }}</span></span>
               </div>
               {% endfor %}
@@ -60,35 +60,35 @@ https://opensource.org/licenses/MIT.
                   <h5 class="text-muted desc-muted">Data Types</h5>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-file-lines fa-fw" aria-hidden="true"></i>
                   <span>Text</span>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-calculator fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-calculator fa-fw" aria-hidden="true"></i>
                   <span>Numeric</span>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-calendar fa-fw" aria-hidden="true"></i>
                   <span>Date</span>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-clock fa-fw" aria-hidden="true"></i>
                   <span>Time</span>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-hourglass-half fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
                   <span>Timestamp</span>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-file-excel-o fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-file-excel fa-fw" aria-hidden="true"></i>
                   <span>Integer</span>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-percent fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-percent fa-fw" aria-hidden="true"></i>
                   <span>Float</span>
                 </li>
                 <li class="list-inline-item">
-                  <i class="fa fa-toggle-on fa-fw" aria-hidden="true"></i>
+                  <i class="fa-solid fa-toggle-on fa-fw" aria-hidden="true"></i>
                   <span>Boolean</span>
                 </li>
               </ul>
@@ -101,7 +101,7 @@ https://opensource.org/licenses/MIT.
           <div id="aggregation" class="axis-list aggregation-list">
             <small class="axis-title">{{ _('Aggregation Type') }}</small>
             <span class="badge-pill">
-              <i class="fa fa-filter fa-fw" aria-hidden="true"></i><span>Count</span>
+              <i class="fa-solid fa-filter fa-fw" aria-hidden="true"></i><span>Count</span>
             </span>
           </div>
         </div>
@@ -131,8 +131,8 @@ https://opensource.org/licenses/MIT.
         <canvas id="chart-canvas"></canvas>
       </div>
       <div class="no-chart-container">
-        <div class="chart-unsupported d-none alert alert-warning">
-          <i class="fa fa-warning fa-fw" aria-hidden="true"></i>
+        <div class="chart-unsupported d-none alert alert-warning" role="alert">
+          <i class="fa-solid fa-triangle-exclamation fa-fw" aria-hidden="true"></i>
           <span>{{ _('The requested graph type combination is currently not supported. Please try with another pill combination.') }}</span>
         </div>
         <figure class="no-chart-illustration">

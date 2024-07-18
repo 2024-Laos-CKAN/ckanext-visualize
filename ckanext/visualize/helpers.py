@@ -14,13 +14,13 @@ from ckan.common import config
 from ckanext.visualize.default_color_palette import DEFAULT_COLORS
 
 ICONS_DATA_TYPES = {
-    'text': 'fa-file-text',
+    'text': 'fa-file-lines',
     'numeric': 'fa-calculator',
     'bool': 'fa-toggle-on',
     'date': 'fa-calendar',
-    'time': 'fa-clock-o',
+    'time': 'fa-clock',
     'timestamp': 'fa-hourglass-half',
-    'int': 'fa-file-excel-o',
+    'int': 'fa-file-excel',
     'float': 'fa-percent'
 }
 

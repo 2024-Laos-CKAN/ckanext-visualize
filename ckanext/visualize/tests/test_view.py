@@ -23,7 +23,7 @@ class TestVisualizeView(object):
         assert self.plugin.info() == {
             'name': 'visualize',
             'title': toolkit._('Visualize data'),
-                    'icon': 'bar-chart-o',
+                    'icon': 'chart-column',
                     'filterable': True,
                     'iframed': False,
                     'schema': {

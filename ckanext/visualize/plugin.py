@@ -52,7 +52,7 @@ class VisualizePlugin(plugins.SingletonPlugin):
         return {
             'name': 'visualize',
             'title': toolkit._('Visualize data'),
-            'icon': 'bar-chart-o',
+            'icon': 'chart-column',
             'filterable': True,
             'iframed': False,
             'schema': schema
